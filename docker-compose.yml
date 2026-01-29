@@ -15,5 +15,6 @@ services:
       - clickhouse_data:/var/lib/clickhouse
       - ./config:/etc/clickhouse-server/config.d
       - ./users:/etc/clickhouse-server/users.d
+      - ./initdb:/docker-entrypoint-initdb.d/
 volumes:
   clickhouse_data:
