@@ -1,0 +1,19 @@
+services:
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:25.10
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./config:/etc/clickhouse-server/config.d
+      - ./users:/etc/clickhouse-server/users.d
+volumes:
+  clickhouse_data:

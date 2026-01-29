@@ -1,0 +1,12 @@
+<clickhouse>
+  <profiles>
+    <default>
+      <join_algorithm>default</join_algorithm>
+      <date_time_input_format>best_effort</date_time_input_format>
+      <output_format_json_pretty_print>1</output_format_json_pretty_print>
+      <compile_expressions>1</compile_expressions>
+      <query_plan_use_logical_join_step>1</query_plan_use_logical_join_step>
+      <query_plan_use_new_logical_join_step>1</query_plan_use_new_logical_join_step>
+    </default>
+  </profiles>
+</clickhouse>

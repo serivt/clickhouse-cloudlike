@@ -1,0 +1,29 @@
+<clickhouse>
+  <compression>
+    <case>
+      <min_part_size>0</min_part_size>
+      <min_part_size_ratio>0</min_part_size_ratio>
+      <method>zstd</method>
+      <level>3</level>
+    </case>
+  </compression>
+  <allow_url_usage_for_s3_functions>1</allow_url_usage_for_s3_functions>
+  <storage_configuration>
+    <disks>
+      <default>
+        <keep_free_space_bytes>1073741824</keep_free_space_bytes>
+      </default>
+    </disks>
+    <policies>
+      <default>
+        <volumes>
+          <main>
+            <disk>default</disk>
+          </main>
+        </volumes>
+      </default>
+    </policies>
+  </storage_configuration>
+  <mark_cache_size>5368709120</mark_cache_size>
+  <uncompressed_cache_size>1073741824</uncompressed_cache_size>
+</clickhouse>

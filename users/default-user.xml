@@ -1,0 +1,14 @@
+<clickhouse>
+  <users>
+    <default remove="remove" />
+    <default>
+      <profile>default</profile>
+      <networks>
+        <ip>::/0</ip>
+      </networks>
+      <password></password>
+      <quota>default</quota>
+      <access_management>1</access_management>
+    </default>
+  </users>
+</clickhouse>

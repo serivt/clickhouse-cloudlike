@@ -1,0 +1,9 @@
+<clickhouse>
+  <listen_host>0.0.0.0</listen_host>
+  <http_port>8123</http_port>
+  <tcp_port>9000</tcp_port>
+  <interserver_http_port>9009</interserver_http_port>
+  <keep_alive_timeout>10</keep_alive_timeout>
+  <max_concurrent_queries>50</max_concurrent_queries>
+  <max_connections>256</max_connections>
+</clickhouse>

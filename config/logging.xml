@@ -1,0 +1,30 @@
+<clickhouse>
+  <logger>
+    <level>information</level>
+    <console>true</console>
+    <!-- <formatting>
+      <type>json</type>
+    </formatting> -->
+  </logger>
+  <query_log>
+    <database>system</database>
+    <table>query_log</table>
+    <partition_by>toYYYYMM(event_date)</partition_by>
+    <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+    <max_size_rows>1048576</max_size_rows>
+    <reserved_size_rows>8192</reserved_size_rows>
+    <buffer_size_rows_flush_threshold>524288</buffer_size_rows_flush_threshold>
+  </query_log>
+  <query_thread_log>
+    <database>system</database>
+    <table>query_thread_log</table>
+    <partition_by>toYYYYMM(event_date)</partition_by>
+    <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+  </query_thread_log>
+  <part_log>
+    <database>system</database>
+    <table>part_log</table>
+    <partition_by>toYYYYMM(event_date)</partition_by>
+    <flush_interval_milliseconds>7500</flush_interval_milliseconds>
+  </part_log>
+</clickhouse>
