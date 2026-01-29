@@ -1,4 +1,4 @@
-.PHONY: help up down restart logs cli cli-admin status clean
+.PHONY: help up down restart logs connect connect-admin run status clean
 
 SERVICE := clickhouse-server
 
@@ -19,6 +19,9 @@ logs: ## Show server logs (follow mode)
 
 connect: ## Connect with default user
 	docker compose exec $(SERVICE) clickhouse-client
+
+run: ## Run a query
+	@docker compose exec $(SERVICE) clickhouse-client -q "$$(cat playground.sql | tr '\n' ' ')"
 
 connect-admin: ## Connect with admin user
 	docker compose exec $(SERVICE) clickhouse-client -u sql_console:admin
